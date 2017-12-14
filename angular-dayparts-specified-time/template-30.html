@@ -1,0 +1,45 @@
+<div class="dayparts-min">
+
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th></th>
+      <th ng-repeat="hour in hours">
+        <a ng-if="!options.disableColumnSelection" ng-click="selectHour(hour)" ng-show="hour !== 0">{{hour}}</a>
+        <span ng-if="options.disableColumnSelection">{{hour}}</span>
+      </th>
+    </tr>
+    <tr ng-repeat="day in days">
+      <th>
+        <a ng-if="!options.disableRowSelection" ng-click="selectDay(day)">{{day.name}}</a>
+        <span ng-if="options.disableRowSelection">{{day.name}}</span>
+      </th>
+      <td ng-repeat="hour in hours" ng-show="hour !== 24">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="selectedClass repeatHour-{{hour}} repeatDay-{{day.position}}" ng-repeat="min in minutes1"
+                data-time="{{day.name}}-{{hour}}-{{min}}"></td>
+            <td class="selectedClass repeatHour-{{hour}} repeatDay-{{day.position}}" ng-repeat="min in minutes4"
+                data-time="{{day.name}}-{{hour}}-{{min}}"></td>
+          </tr>
+          <!--<tr>-->
+          <!--<td class="selectedClass repeatHour-{{hour}} repeatDay-{{day.position}}" ng-repeat="min in minutes2"-->
+          <!--data-time="{{day.name}}-{{hour}}-{{min}}"></td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+          <!--<td class="selectedClass repeatHour-{{hour}} repeatDay-{{day.position}}" ng-repeat="min in minutes3"-->
+          <!--data-time="{{day.name}}-{{hour}}-{{min}}"></td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+          <!---->
+          <!--</tr>-->
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <button type="button" class="btn btn-dlm-tb" ng-click="reset()" ng-if="options.reset">
+    <span class="glyphicon glyphicon-time"></span>
+    Clear
+  </button>
+
+</div>

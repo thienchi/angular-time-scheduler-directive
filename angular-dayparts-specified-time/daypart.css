@@ -1,0 +1,74 @@
+.dayparts-min {
+  width: 750px;
+}
+
+.dayparts-min table {
+  width: 100%;
+}
+
+.dayparts-min td {
+  cursor: pointer;
+}
+
+.dayparts-min td.selectedClass {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.dayparts-min th {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.dayparts-min td, .dayparts-min th {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+}
+
+.dayparts-min tr:first-child th {
+  text-align: left;
+  text-indent: -4px;
+}
+
+.dayparts-min tr:not(:first-child) th {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.dayparts-min tr td:last-child {
+  /*border: 0;*/
+}
+
+.dayparts-min .selected {
+  background: #1e4163;
+  color: white;
+}
+
+.dayparts-min button {
+  margin-top: 10px;
+  float: right;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.dayparts-min a {
+  cursor: pointer;
+  font-weight: bold;
+  color: #1cbbff;
+}
+
+.dayparts-min a:hover {
+  color: #333333;
+}
+
+.selectedClass {
+  width: 50px !important;
+  height: 26px !important;
+  border: 1px solid #ccc;
+}
